@@ -118,7 +118,9 @@ class LeNet(nn.Module): 					# 继承于nn.Module这个父类
         )
         self.block_2 = nn.Sequential(
             nn.Linear(16*5*5, 120),
+            nn.ReLU(),
             nn.Linear(120, 84),
+            nn.ReLU(),
             nn.Linear(84, 10),
         )
 
